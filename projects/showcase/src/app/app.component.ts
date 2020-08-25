@@ -3,22 +3,8 @@ import { NgSimpleAlertService } from '../../../ng-simple-alert/src/lib/ng-simple
 
 @Component({
   selector: 'app-root',
-  template: `
-    <ng-simple-alert></ng-simple-alert>
-    <button class="success" (click)="createSuccessMessage()">
-      Create success alert
-    </button>
-    <button class="danger" (click)="createDangerMessage()">
-      Create danger alert
-    </button>
-    <button class="warning" (click)="createWarningMessage()">
-      Create warning alert
-    </button>
-    <button class="info" (click)="createInfoMessage()">
-      Create info alert
-    </button>
-  `,
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   constructor(private alertService: NgSimpleAlertService) {}

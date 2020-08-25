@@ -1,0 +1,22 @@
+.container {
+  max-width: 1230px;
+  min-width: 1230px;
+  width: 100%;
+}
+
+.tile {
+  box-sizing: border-box;
+  min-height: 200px;
+  height: 100%;
+  max-width: 580px;
+  border: 1px solid #d9dce1;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1279.9px) {
+  .container {
+    max-width: 580px;
+    min-width: unset;
+  }
+}
