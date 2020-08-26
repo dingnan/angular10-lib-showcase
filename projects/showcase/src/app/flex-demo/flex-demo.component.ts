@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flex-demo.component.scss'],
 })
 export class FlexDemoComponent implements OnInit {
-  public numberOfTiles = 5;
-
   constructor() {}
 
   ngOnInit(): void {}

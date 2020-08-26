@@ -5,9 +5,40 @@
       fxLayoutGap="20px grid"
       fxLayoutAlign="space-between"
     >
+      <div fxFlex="50%" fxFlex.sm="100%" fxFlex.md="100%" fxFlex.xs="100%">
+        <div
+          class="tile"
+          fxLayout="column"
+          fxLayoutAlign="space-between"
+          fxFill
+        >
+          <div
+            style="
+              border: 1px solid;
+              height: 300px;
+              text-align: center;
+              padding: 70px 0;
+              font-size: 24px;
+            "
+          >
+            tall
+          </div>
+        </div>
+      </div>
+
       <ng-container *ngFor="let number of [0, 1, 2, 3, 4]">
         <div fxFlex="50%" fxFlex.sm="100%" fxFlex.md="100%" fxFlex.xs="100%">
-          <div class="tile">{{ number }}</div>
+          <div
+            class="tile"
+            fxLayout="column"
+            fxLayoutAlign="space-between"
+            fxFill
+          >
+            <div style="border: 1px solid; margin-bottom: 16px;">
+              {{ number }}
+            </div>
+            <div style="border: 1px dashed;">{{ number }}</div>
+          </div>
         </div>
       </ng-container>
     </div>
