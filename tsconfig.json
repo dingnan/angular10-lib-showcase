@@ -17,7 +17,7 @@
       "path": "./projects/showcase/tsconfig.app.json"
     },
     {
-      "path": "./projects/showcase/tsconfig.spec.json"
+      "path": "./tsconfig.spec.json"
     }
-]
+  ]
 }
