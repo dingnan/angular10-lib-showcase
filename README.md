@@ -76,15 +76,18 @@ https://github.com/angular/flex-layouth
 
 https://blog.angular-university.io/angular-host-context/
 
+:host, :host-context, ::ng-deep
+
 # Jest
 
 1. test all spec files
-"npm run test"
+
+1) "npm run test"
 
 2. test on spec
-  install jest cli: "npm install jest-cli"
-  "jest app.component.spec.ts"
-  or change package.json "test": "jest app.component.spec.ts",
+   1. install jest cli: "npm install jest-cli"
+   2. "jest app.component.spec.ts"
+   3. or change package.json "test": "jest app.component.spec.ts",
 
 # Prettier
 

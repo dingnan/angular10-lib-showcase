@@ -14,6 +14,19 @@
   padding: 20px;
 }
 
+:host {
+  display: block;
+  margin-top: 20px;
+}
+
+:host-context(.blue-theme) .flex-content {
+  background-color: lightblue;
+}
+
+:host-context(.grey-theme) .flex-content {
+  background-color: lightgrey;
+}
+
 @media screen and (max-width: 1279.9px) {
   .container {
     max-width: 580px;
