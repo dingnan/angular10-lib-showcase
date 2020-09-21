@@ -20,7 +20,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/).
 
 ## Running end-to-end tests
 
@@ -82,12 +82,16 @@ https://blog.angular-university.io/angular-host-context/
 
 1. test all spec files
 
-1) "npm run test"
+"npm run test"
 
-2. test on spec
+2. test on one spec file
+
    1. install jest cli: "npm install jest-cli"
    2. "jest app.component.spec.ts"
    3. or change package.json "test": "jest app.component.spec.ts",
+
+3. How to debug Jest tests with VSCode
+   https://www.basefactor.com/using-visual-studio-code-to-debug-jest-based-unit-tests
 
 # Prettier
 

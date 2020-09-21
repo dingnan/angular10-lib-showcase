@@ -1,17 +1,32 @@
 <div>
-  <ng-simple-alert></ng-simple-alert>
-  <button class="success" (click)="createSuccessMessage()">
-    Create success alert
-  </button>
-  <button class="danger" (click)="createDangerMessage()">
-    Create danger alert
-  </button>
-  <button class="warning" (click)="createWarningMessage()">
-    Create warning alert
-  </button>
-  <button class="info" (click)="createInfoMessage()">Create info alert</button>
-  <div class="grey-theme">
-    <h2>Total {{ tiles }} tiles.</h2>
-    <app-flex-demo></app-flex-demo>
-  </div>
+  <mat-tab-group>
+    <mat-tab label="Alert Library Demo"
+      ><div>
+        <ng-simple-alert></ng-simple-alert>
+        <button class="success" (click)="createSuccessMessage()">
+          Create success alert
+        </button>
+        <button class="danger" (click)="createDangerMessage()">
+          Create danger alert
+        </button>
+        <button class="warning" (click)="createWarningMessage()">
+          Create warning alert
+        </button>
+        <button class="info" (click)="createInfoMessage()">
+          Create info alert
+        </button>
+      </div>
+    </mat-tab>
+    <mat-tab label="Flex Layout Demo">
+      <div>
+        <div class="grey-theme">
+          <h2>Total {{ tiles }} tiles.</h2>
+          <app-flex-demo></app-flex-demo>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="To Do Demo"
+      ><div><app-todo-list></app-todo-list></div>
+    </mat-tab>
+  </mat-tab-group>
 </div>
