@@ -1,18 +1,24 @@
-<table>
-  <tr>
-    <th>Complete</th>
-    <th>ID</th>
-    <th>Task</th>
-  </tr>
-  <tr *ngFor="let todo of todos">
-    <td>
-      <input
-        type="checkbox"
-        [checked]="todo.completed"
-        (change)="todo.completed = !todo.completed"
-      />
-    </td>
-    <td>{{ todo.id }}</td>
-    <td>{{ todo.title }}</td>
-  </tr>
-</table>
+<ng-container *ngIf="todos.length; then listTodos; else addTodo"></ng-container>
+<ng-template #addTodo>
+  <button>Add Todo</button>
+</ng-template>
+<ng-template #listTodos>
+  <table>
+    <tr>
+      <th>Complete</th>
+      <th>ID</th>
+      <th>Task</th>
+    </tr>
+    <tr *ngFor="let todo of todos">
+      <td>
+        <input
+          type="checkbox"
+          [checked]="todo.completed"
+          (change)="todo.completed = !todo.completed"
+        />
+      </td>
+      <td>{{ todo.id }}</td>
+      <td>{{ todo.title }}</td>
+    </tr>
+  </table>
+</ng-template>
