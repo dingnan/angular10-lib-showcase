@@ -1,4 +1,9 @@
-<div class="alert" *ngIf="alertMessage$ | async as alertMessage" [ngStyle]="{ background: alertMessage.color }">
-    <span class="closebtn" (click)="closeAlert()">&times;</span>
-    <strong>{{ alertMessage.prefix }}!</strong> {{ alertMessage.message }}
-  </div>
+<div
+  class="alert"
+  *ngIf="alertMessage$ | async as alertMessage"
+  [ngStyle]="{ background: alertMessage.color }"
+>
+  <img src="assets/images/alert.png" width="36px" style="float: left; margin-right: 20px;" />
+  <span class="closebtn" (click)="closeAlert()">&times;</span>
+  <strong>{{ alertMessage.prefix }}!</strong> {{ alertMessage.message }}
+</div>

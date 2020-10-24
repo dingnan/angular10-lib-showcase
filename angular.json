@@ -36,9 +36,7 @@
               "projects/ng-simple-alert/tsconfig.lib.json",
               "projects/ng-simple-alert/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -65,11 +63,14 @@
             "aot": true,
             "assets": [
               "projects/showcase/src/favicon.ico",
-              "projects/showcase/src/assets"
+              "projects/showcase/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./projects/ng-simple-alert/src/assets/",
+                "output": "./assets/"
+              }
             ],
-            "styles": [
-              "projects/showcase/src/styles.scss"
-            ],
+            "styles": ["projects/showcase/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -131,9 +132,7 @@
               "projects/showcase/src/favicon.ico",
               "projects/showcase/src/assets"
             ],
-            "styles": [
-              "projects/showcase/src/styles.scss"
-            ],
+            "styles": ["projects/showcase/src/styles.scss"],
             "scripts": []
           }
         },
@@ -145,9 +144,7 @@
               "projects/showcase/tsconfig.spec.json",
               "projects/showcase/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -163,6 +160,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ng-simple-alert"
 }
