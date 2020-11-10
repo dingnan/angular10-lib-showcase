@@ -66,17 +66,9 @@ library package.json
 "@angular/flex-layout": "^10.0.0-beta.32"
 },
 
-# flex-layout
+# Mock backend api projectTODO
 
-https://github.com/angular/flex-layouth
-
-# add a mock backend api project
-
-# Angular View Encapsulation
-
-https://blog.angular-university.io/angular-host-context/
-
-:host, :host-context, ::ng-deep
+TODO
 
 # Jest
 
