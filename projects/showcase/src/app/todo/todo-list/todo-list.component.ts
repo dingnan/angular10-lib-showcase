@@ -1,21 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../todo.service';
+import { ChangeDetectionStrategy, Component, Input, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import { TodoItem } from '../../models/todo-item';
 
+/**
+ * Presentational Component
+ */
 @Component({
-  selector: 'app-todo-list',
+  selector: 'todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoListComponent implements OnInit {
-  todos: any;
-  constructor(private todoService: TodoService) {}
+  @Input() todos: TodoItem[] = [];
+  @Output() addTodo: EventEmitter<any> = new EventEmitter<any>();
+  @Output() updateTodo: EventEmitter<any> = new EventEmitter<any>();
+  @Output() removeTodo: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor() {}
 
   ngOnInit(): void {
-    this.todoService.getTodos().subscribe(
-      (res: Array<any>) => {
-        this.todos = res.slice(0, 10);
-      },
-      (error) => {}
-    );
+  }
+
+  addTodoItem(e) {
+    this.addTodo.emit('add todo clicked');
+  }
+  
+  updateTodoItem(todo: TodoItem) {
+    this.updateTodo.emit(todo);
+  }
+  
+  removeTodoItem(todo: TodoItem) {
+    this.removeTodo.emit(todo);
   }
 }

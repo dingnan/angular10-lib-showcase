@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { TodoItem } from '../models/todo-item';
 
 // A service becomes singleton when we apply providedIn
 @Injectable({
@@ -16,8 +18,8 @@ export class TodoService {
   PUT/PATCH – Update
   DELETE – Delete
   */
-  getTodos() {
-    return this.http.get(this.baseUrl + 'todos');
+  getTodos(): Observable<TodoItem[]> {
+    return this.http.get<TodoItem[]>(this.baseUrl + 'todos');
   }
 
   getTodo(id) {

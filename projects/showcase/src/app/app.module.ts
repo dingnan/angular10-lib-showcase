@@ -9,6 +9,7 @@ import { FlexDemoComponent } from './flex-demo/flex-demo.component';
 import { TodoListComponent } from './todo/todo-list/todo-list.component';
 import { TodoItemComponent } from './todo/todo-item/todo-item.component';
 import { TodoService } from './todo/todo.service';
+import { TodoListContainerComponent } from './todo/todo-list.container/todo-list.container.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TodoService } from './todo/todo.service';
     FlexDemoComponent,
     TodoListComponent,
     TodoItemComponent,
+    TodoListContainerComponent,
   ],
   imports: [
     BrowserModule,
