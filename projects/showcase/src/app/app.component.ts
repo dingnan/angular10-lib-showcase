@@ -1,6 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
-import { NgSimpleAlertService } from '../../../ng-simple-alert/src/lib/ng-simple-alert.service';
-import { FlexDemoComponent } from './flex-demo/flex-demo.component';
+import { Component, ViewChild } from '@angular/core'
+import { Router } from '@angular/router'
+import { NgSimpleAlertService } from '../../../ng-simple-alert/src/lib/ng-simple-alert.service'
+import { FlexDemoComponent } from './flex-demo/flex-demo.component'
 
 @Component({
   selector: 'app-root',
@@ -8,28 +9,39 @@ import { FlexDemoComponent } from './flex-demo/flex-demo.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @ViewChild(FlexDemoComponent) flexDemo;
-  tiles: number;
+  title = 'app'
+  navLinks: any[]
+  activeLinkIndex = -1
 
-  constructor(private alertService: NgSimpleAlertService) {}
-
-  ngAfterViewInit() {
-    this.tiles = this.flexDemo.numberOfTiles;
+  constructor(private router: Router) {
+    this.navLinks = [
+      {
+        label: 'Home',
+        link: '/',
+        index: 0,
+      },
+      {
+        label: 'Alert Lib',
+        link: './alert',
+        index: 1,
+      },
+      {
+        label: 'Flex layout',
+        link: './flex',
+        index: 2,
+      },
+      {
+        label: 'To do',
+        link: './todo',
+        index: 3,
+      },
+    ]
   }
-
-  public createSuccessMessage(): void {
-    this.alertService.createSuccessAlert('Sample success message');
-  }
-
-  public createDangerMessage(): void {
-    this.alertService.createDangerAlert('Sample danger message');
-  }
-
-  public createWarningMessage(): void {
-    this.alertService.createWarningAlert('Sample warning message');
-  }
-
-  public createInfoMessage(): void {
-    this.alertService.createInfoAlert('Sample info message');
+  ngOnInit(): void {
+    this.router.events.subscribe((res) => {
+      this.activeLinkIndex = this.navLinks.indexOf(
+        this.navLinks.find((tab) => tab.link === '.' + this.router.url),
+      )
+    })
   }
 }

@@ -12,6 +12,7 @@ import { TodoItemComponent } from './todo/todo-item/todo-item.component'
 import { TodoService } from './todo/todo.service'
 import { TodoListContainerComponent } from './todo/todo-list.container/todo-list.container.component'
 import { HomeModule } from './modules/home/home.module'
+import { AppRoutingModule } from './app-routing.module'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HomeModule } from './modules/home/home.module'
     BrowserModule,
     AngularMaterialModule,
     HttpClientModule,
+    AppRoutingModule,
     FlexLayoutModule,
     NgSimpleAlertModule,
     LayoutModule,
