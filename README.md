@@ -1,18 +1,16 @@
 # Angular10 Library and Showcase project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.
 
 # github
 
 https://github.com/dingnan/angular10-lib-showcase
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npx ng g module layout` to generate module.
+Run `npx ng g c layout/header --module layout` to generate component.
+You can also use `npx ng generate component|directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
