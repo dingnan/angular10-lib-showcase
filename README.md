@@ -1,4 +1,4 @@
-# Angular10 Library and Showcase project
+# Angular ibrary and Showcase project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.
 
@@ -34,14 +34,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 https://github.com/mathisGarberg/angular-folder-structure
 
-├── media
-└── src
-├── app
-│ ├── core
-│ ├── data
-│ ├── layout
-│ ├── module
-│ └── shared
+├── media  
+└── src  
+├── app  
+│ ├── core  
+│ ├── data  
+│ ├── layout  
+│ ├── module  
+│ └── shared  
 └── styles
 
 https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
