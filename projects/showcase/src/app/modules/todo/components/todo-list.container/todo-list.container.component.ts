@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
+import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item'
 import { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
-import { TodoService } from '../todo.service'
-import { TodoItem } from '../../data/schema/todo-item'
+import { TodoService } from '../../service/todo.service'
 
 /**
  * Container Component

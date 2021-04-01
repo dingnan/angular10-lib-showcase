@@ -30,6 +30,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Project structure and knowledge points
 
+# angular folder structure
+
+https://github.com/mathisGarberg/angular-folder-structure
+
+├── media
+└── src
+├── app
+│ ├── core
+│ ├── data
+│ ├── layout
+│ ├── module
+│ └── shared
+└── styles
+
+https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
+
 # The ultimate guide to set up your Angular library project
 
 https://medium.com/angular-in-depth/the-ultimate-guide-to-set-up-your-angular-library-project-399d95b63500

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs'
-import { TodoItem } from '../data/schema/todo-item'
+import { TodoItem } from '../../../data/schema/todo-item'
 
 // A service becomes singleton when we apply providedIn
 @Injectable({

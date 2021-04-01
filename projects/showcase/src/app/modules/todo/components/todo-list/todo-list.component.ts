@@ -6,7 +6,7 @@ import {
   Output,
 } from '@angular/core'
 import { EventEmitter } from '@angular/core'
-import { TodoItem } from '../../data/schema/todo-item'
+import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item'
 
 /**
  * Presentational Component

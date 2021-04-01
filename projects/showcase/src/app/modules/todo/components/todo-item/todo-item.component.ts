@@ -4,7 +4,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core'
-import { TodoItem } from '../../data/schema/todo-item'
+import { TodoItem } from '../../../../data/schema/todo-item'
 
 /**
  * Presentational Component
