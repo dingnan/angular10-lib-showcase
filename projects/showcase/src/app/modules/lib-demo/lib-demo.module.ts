@@ -4,7 +4,7 @@ import { AlertComponent } from './components/alert/alert.component'
 import { AlertPageComponent } from './page/alert.page.component'
 import { NgSimpleAlertModule } from 'ng-simple-alert'
 import { RouterModule, Routes } from '@angular/router'
-import { SharedModule } from '../../shared/shared.module'
+import { SharedModule } from '../shared/shared.module'
 
 const route: Routes = [{ path: '', component: AlertComponent }]
 

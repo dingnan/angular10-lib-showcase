@@ -4,10 +4,9 @@
     <a
       mat-tab-link
       *ngFor="let link of navLinks"
-      [routerLink]="link.link"
-      routerLinkActive
-      #rla="routerLinkActive"
-      [active]="rla.isActive"
+      [routerLink]="link.path"
+      (click)="activeLink = link"
+      [active]="activeLink == link"
     >
       {{ link.label }}
     </a>
