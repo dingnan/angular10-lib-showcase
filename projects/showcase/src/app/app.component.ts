@@ -1,7 +1,5 @@
-import { Component, ViewChild } from '@angular/core'
+import { Component } from '@angular/core'
 import { Router } from '@angular/router'
-import { NgSimpleAlertService } from '../../../ng-simple-alert/src/lib/ng-simple-alert.service'
-import { FlexDemoComponent } from './flex-demo/flex-demo.component'
 
 @Component({
   selector: 'app-root',

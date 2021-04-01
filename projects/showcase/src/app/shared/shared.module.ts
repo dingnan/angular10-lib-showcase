@@ -4,7 +4,7 @@ import { AngularMaterialModule } from './material.module'
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, AngularMaterialModule],
+  imports: [CommonModule],
   exports: [AngularMaterialModule],
 })
 export class SharedModule {}
