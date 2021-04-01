@@ -2,10 +2,9 @@ import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { HttpClientModule } from '@angular/common/http'
 import { FlexLayoutModule } from '@angular/flex-layout'
-import { AngularMaterialModule } from './material.module'
+import { AngularMaterialModule } from './shared/material.module'
 import { AppComponent } from './app.component'
 import { LayoutModule } from './layout/layout.module'
-import { NgSimpleAlertModule } from '../../../ng-simple-alert/src/lib/ng-simple-alert.module'
 import { FlexDemoComponent } from './flex-demo/flex-demo.component'
 import { TodoListComponent } from './todo/todo-list/todo-list.component'
 import { TodoItemComponent } from './todo/todo-item/todo-item.component'
@@ -28,7 +27,6 @@ import { AppRoutingModule } from './app-routing.module'
     HttpClientModule,
     AppRoutingModule,
     FlexLayoutModule,
-    NgSimpleAlertModule,
     LayoutModule,
     HomeModule,
   ],

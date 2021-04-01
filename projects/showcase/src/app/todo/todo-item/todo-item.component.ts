@@ -1,5 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { TodoItem } from '../../models/todo-item';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core'
+import { TodoItem } from '../../data/schema/todo-item'
 
 /**
  * Presentational Component
@@ -8,14 +13,12 @@ import { TodoItem } from '../../models/todo-item';
   selector: 'todo-item',
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoItemComponent implements OnInit {
-  @Input() todo: TodoItem;
+  @Input() todo: TodoItem
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

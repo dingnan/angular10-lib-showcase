@@ -8,7 +8,7 @@ https://github.com/dingnan/angular10-lib-showcase
 
 ## Code scaffolding
 
-Run `npx ng g module layout` to generate module.
+Run `npx ng g module layout` to generate module.  
 Run `npx ng g c layout/header --module layout` to generate component.
 You can also use `npx ng generate component|directive|pipe|service|class|guard|interface|enum|module`.
 
@@ -45,10 +45,10 @@ https://medium.com/angular-in-depth/the-ultimate-guide-to-set-up-your-angular-li
 
 # how to consume this library in other application?
 
-1. (in the root of project) > np install ../widget/ng-simple-alert-0.0.1.tgz
+1. (in the root of project) > `npm install ../widget/ng-simple-alert-0.0.1.tgz`
 
 2. app.module.ts
-   import { NgSimpleAlertModule } from "@ng-simple-alert"
+   import { NgSimpleAlertModule } from "ng-simple-alert"
 
 # peerDependencies
 

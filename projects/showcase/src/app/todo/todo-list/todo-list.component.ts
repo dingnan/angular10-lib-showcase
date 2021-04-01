@@ -1,6 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, Output } from '@angular/core';
-import { EventEmitter } from '@angular/core';
-import { TodoItem } from '../../models/todo-item';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core'
+import { EventEmitter } from '@angular/core'
+import { TodoItem } from '../../data/schema/todo-item'
 
 /**
  * Presentational Component
@@ -9,28 +15,27 @@ import { TodoItem } from '../../models/todo-item';
   selector: 'todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoListComponent implements OnInit {
-  @Input() todos: TodoItem[] = [];
-  @Output() addTodo: EventEmitter<any> = new EventEmitter<any>();
-  @Output() updateTodo: EventEmitter<any> = new EventEmitter<any>();
-  @Output() removeTodo: EventEmitter<any> = new EventEmitter<any>();
+  @Input() todos: TodoItem[] = []
+  @Output() addTodo: EventEmitter<any> = new EventEmitter<any>()
+  @Output() updateTodo: EventEmitter<any> = new EventEmitter<any>()
+  @Output() removeTodo: EventEmitter<any> = new EventEmitter<any>()
 
   constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   addTodoItem(e) {
-    this.addTodo.emit('add todo clicked');
+    this.addTodo.emit('add todo clicked')
   }
-  
+
   updateTodoItem(todo: TodoItem) {
-    this.updateTodo.emit(todo);
+    this.updateTodo.emit(todo)
   }
-  
+
   removeTodoItem(todo: TodoItem) {
-    this.removeTodo.emit(todo);
+    this.removeTodo.emit(todo)
   }
 }
