@@ -1,5 +1,17 @@
-.content {
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
   max-width: 90rem;
   margin: 0 auto;
-  min-height: 80vh;
+  min-height: 85vh;
+  padding-bottom: 2.5rem; /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  width: 100%;
+  height: 2.5rem; /* Footer height */
 }
