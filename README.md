@@ -69,8 +69,16 @@ Understanding when and why to use npm peerDependencies
 
 https://medium.com/angular-in-depth/npm-peer-dependencies-f843f3ac4e7f
 
-library **package.json**  
-`"peerDependencies": { "@angular/common": "^10.0.11", "@angular/core": "^10.0.11", "@angular/flex-layout": "^10.0.0-beta.32" }, `
+library **package.json**
+
+```json
+"peerDependencies":
+{
+   "@angular/common": "^10.0.11",
+   "@angular/core": "^10.0.11",
+   "@angular/flex-layout": "^10.0.0-beta.32"
+},
+```
 
 ## Mock backend api project
 
