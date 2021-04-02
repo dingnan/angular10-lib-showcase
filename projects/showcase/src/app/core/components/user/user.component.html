@@ -1,4 +1,8 @@
 <div class="sign-in-out">
-  <span *ngIf="!SignedIn" (click)="signin()" class="sign-in">Sign in</span>
-  <span *ngIf="SignedIn" (click)="signout()" class="sign-out">Sign out</span>
+  <span *ngIf="!(SignedIn$ | async)" (click)="signin()" class="sign-in"
+    >Sign in</span
+  >
+  <span *ngIf="SignedIn$ | async" (click)="signout()" class="sign-out"
+    >Sign out</span
+  >
 </div>

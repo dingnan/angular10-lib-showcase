@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Observable } from 'rxjs'
 import { AuthService } from '../../service/auth.service'
 
 @Component({
@@ -7,13 +8,11 @@ import { AuthService } from '../../service/auth.service'
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit {
+  SignedIn$: Observable<boolean> = this.auth.UserSignedIn$.asObservable()
+
   constructor(private auth: AuthService) {}
 
   ngOnInit(): void {}
-
-  get SignedIn(): boolean {
-    return this.auth.IsUserSignedIn()
-  }
 
   signin() {
     this.auth.SignIn()
