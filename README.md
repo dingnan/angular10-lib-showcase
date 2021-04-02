@@ -72,7 +72,7 @@ https://medium.com/angular-in-depth/npm-peer-dependencies-f843f3ac4e7f
 library **package.json**  
 `"peerDependencies": { "@angular/common": "^10.0.11", "@angular/core": "^10.0.11", "@angular/flex-layout": "^10.0.0-beta.32" }, `
 
-## Mock backend api projectTODO
+## Mock backend api project
 
 TODO
 
@@ -84,9 +84,9 @@ TODO
 
 2. test on one spec file
 
-   1. install jest cli: "npm install jest-cli"
-   2. "jest app.component.spec.ts"
-   3. or change package.json "test": "jest app.component.spec.ts",
+   - install jest cli: `npm install jest-cli`
+   - `jest app.component.spec.ts`
+   - or change _package.json_ "test": "jest app.component.spec.ts",
 
 3. How to debug Jest tests with VSCode  
    https://www.basefactor.com/using-visual-studio-code-to-debug-jest-based-unit-tests
