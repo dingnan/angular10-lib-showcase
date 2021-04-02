@@ -1,10 +1,13 @@
 <div class="todo-item">
   <span style="padding: 0 40px 0 20px">
-      <input
-        type="checkbox"
-        [checked]="todo.completed"
-        (change)="todo.completed = !todo.completed"/>
+    <input
+      type="checkbox"
+      [checked]="item.completed"
+      (change)="item.completed = !item.completed"
+    />
   </span>
-  <span>{{ todo.id }}</span>
-  <span>{{ todo.title }}</span>
+  <span>{{ item.id }}</span>
+  <span
+    ><a routerLink="{{ './' + item.id }}">{{ item.title }}</a></span
+  >
 </div>

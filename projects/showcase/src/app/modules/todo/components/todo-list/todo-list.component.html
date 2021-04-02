@@ -1,11 +1,13 @@
 <div class="center">
-  <ng-container *ngIf="todos?.length; then listTodos; else addTodo"></ng-container>
+  <ng-container
+    *ngIf="todos?.length; then listTodos; else addTodo"
+  ></ng-container>
   <ng-template #addTodo>
-    <div style="margin-bottom: 20px;">You do not have any todo item</div>
+    <div style="margin-bottom: 20px">You do not have any todo item</div>
     <button (click)="addTodoItem($event)">Add Todo</button>
   </ng-template>
   <ng-template #listTodos>
-    <div style="display: flex; margin-bottom: 20px;">
+    <div style="display: flex; margin-bottom: 20px">
       <div style="flex: 0.3"></div>
       <div class="todo-item-header" style="flex: 1">
         <span>Completed</span>
@@ -13,14 +15,14 @@
         <span>Description</span>
       </div>
     </div>
-    <div *ngFor="let todo of todos" style="display: flex;">
-      <div style="flex: 0.3; margin-top: 10px;">
+    <div *ngFor="let todo of todos" style="display: flex">
+      <div style="flex: 0.3; margin-top: 10px">
         <button (click)="updateTodoItem(todo)">Update</button>
         <button (click)="removeTodoItem(todo)">Remove</button>
       </div>
       <div style="flex: 1">
-        <todo-item [todo]="todo"></todo-item>
-      </div>      
+        <todo-item [item]="todo"></todo-item>
+      </div>
     </div>
   </ng-template>
 </div>

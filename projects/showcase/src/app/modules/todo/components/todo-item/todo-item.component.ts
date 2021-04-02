@@ -16,7 +16,7 @@ import { TodoItem } from '../../../../data/schema/todo-item'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoItemComponent implements OnInit {
-  @Input() todo: TodoItem
+  @Input() item: TodoItem
 
   constructor() {}
 
