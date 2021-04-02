@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.
 
-# github
+## github
 
 https://github.com/dingnan/angular10-lib-showcase
 
@@ -24,19 +24,15 @@ Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/).
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
 ## Project structure and knowledge points
 
-# angular folder structure
+### angular folder structure
 
 https://github.com/mathisGarberg/angular-folder-structure
 
 ├── media  
 └── src  
-├── app  
+│ └──── app  
 │ ├── core  
 │ ├── data  
 │ ├── layout  
@@ -46,49 +42,45 @@ https://github.com/mathisGarberg/angular-folder-structure
 
 https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
 
-# The ultimate guide to set up your Angular library project
+### The ultimate guide to set up your Angular library project
 
 https://medium.com/angular-in-depth/the-ultimate-guide-to-set-up-your-angular-library-project-399d95b63500
 
-# how to package the library?
+## how to package the library?
 
 1. at root level package.json
-   "npm_pack": "ng build ng-simple-alert && cd dist/ng-simple-alert && npm pack",
+   `"npm_pack": "ng build ng-simple-alert && cd dist/ng-simple-alert && npm pack",`
 
 2. > npm run npm_pack
 
 3. copy dist/ng-simple-alert/ng-simple-alert-0.0.1.tgz to a folder
 
-# how to consume this library in other application?
+## how to consume this library in other application?
 
 1. (in the root of project) > `npm install ../widget/ng-simple-alert-0.0.1.tgz`
 
 2. app.module.ts  
    `import { NgSimpleAlertModule } from "ng-simple-alert"`
 
-# peerDependencies
+## peerDependencies
 
-npm Peer Dependencies
+npm Peer Dependencies  
 Understanding when and why to use npm peerDependencies
 
 https://medium.com/angular-in-depth/npm-peer-dependencies-f843f3ac4e7f
 
-library package.json
-"peerDependencies": {
-"@angular/common": "^10.0.11",
-"@angular/core": "^10.0.11",
-"@angular/flex-layout": "^10.0.0-beta.32"
-},
+library **package.json**  
+`"peerDependencies": { "@angular/common": "^10.0.11", "@angular/core": "^10.0.11", "@angular/flex-layout": "^10.0.0-beta.32" }, `
 
-# Mock backend api projectTODO
+## Mock backend api projectTODO
 
 TODO
 
-# Jest
+## Jest
 
 1. test all spec files
 
-"npm run test"
+`"npm run test"`
 
 2. test on one spec file
 
@@ -96,11 +88,12 @@ TODO
    2. "jest app.component.spec.ts"
    3. or change package.json "test": "jest app.component.spec.ts",
 
-3. How to debug Jest tests with VSCode
+3. How to debug Jest tests with VSCode  
    https://www.basefactor.com/using-visual-studio-code-to-debug-jest-based-unit-tests
 
-# Prettier
+## Prettier
 
 https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
-File -> Preferences -> Settings -> Text Editor -> Formatting -> check Format On Save
+File -> Preferences -> Settings -> Text Editor -> Formatting -> check Format On Save  
+check this file for reference .vscode\settings.json
