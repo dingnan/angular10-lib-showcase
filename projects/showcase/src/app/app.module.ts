@@ -7,6 +7,7 @@ import { LayoutModule } from './layout/layout.module'
 import { HomeModule } from './modules/home/home.module'
 import { AppRoutingModule } from './app-routing.module'
 import { SharedModule } from './modules/shared/shared.module'
+import { CoreModule } from './core/core.module'
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { SharedModule } from './modules/shared/shared.module'
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    CoreModule,
     LayoutModule,
     HomeModule,
     SharedModule,

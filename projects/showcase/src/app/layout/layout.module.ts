@@ -5,10 +5,11 @@ import { HeaderComponent } from './header/header.component'
 import { FooterComponent } from './footer/footer.component'
 import { NavComponent } from './nav/nav.component'
 import { SharedModule } from '../modules/shared/shared.module'
+import { CoreModule } from '../core/core.module'
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, NavComponent],
-  imports: [CommonModule, RouterModule, SharedModule],
+  imports: [CommonModule, RouterModule, CoreModule, SharedModule],
   exports: [HeaderComponent, FooterComponent, NavComponent],
 })
 export class LayoutModule {}

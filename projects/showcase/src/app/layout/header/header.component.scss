@@ -1,8 +1,16 @@
-:host ::ng-deep h2 {
-  color: rgb(60, 0, 255);
-}
-
 .header {
   max-width: 90rem;
   margin: 0 auto;
+  color: rgb(255, 255, 255);
+  background-color: rgb(25, 118, 210);
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-name {
+  flex-grow: 1;
+  padding-left: 10px;
 }

@@ -88,7 +88,7 @@ TODO
 
 1. test all spec files
 
-`"npm run test"`
+`npm run test`
 
 2. test on one spec file
 
@@ -104,4 +104,4 @@ TODO
 https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
 File -> Preferences -> Settings -> Text Editor -> Formatting -> check Format On Save  
-check this file for reference .vscode\settings.json
+check this file for reference **.vscode\settings.json**
