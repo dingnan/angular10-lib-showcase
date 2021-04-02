@@ -30,15 +30,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 https://github.com/mathisGarberg/angular-folder-structure
 
-├── media  
-└── src  
-│ └──── app  
-│ ├── core  
-│ ├── data  
-│ ├── layout  
-│ ├── module  
-│ └── shared  
+```
+├── media
+└── src
+│ └── app
+│   ├── core
+│   ├── data
+│   ├── layout
+│   ├── module
+│   └── shared
 └── styles
+```
 
 https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
 
@@ -104,4 +106,5 @@ TODO
 https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
 File -> Preferences -> Settings -> Text Editor -> Formatting -> check Format On Save  
-check this file for reference **.vscode\settings.json**
+check this file for reference  
+**.vscode\settings.json**

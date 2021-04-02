@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { AuthService } from 'projects/showcase/src/app/core/service/auth.service'
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./home.page.component.scss'],
 })
 export class HomePageComponent implements OnInit {
-  constructor() {}
+  constructor(private auth: AuthService) {}
 
   ngOnInit(): void {}
 }
