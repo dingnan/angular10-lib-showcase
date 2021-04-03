@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { AuthService } from 'projects/showcase/src/app/core/service/auth.service'
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-todo-page',
   templateUrl: './todo-page.component.html',
-  styleUrls: ['./todo-page.component.scss']
+  styleUrls: ['./todo-page.component.scss'],
 })
 export class TodoPageComponent implements OnInit {
+  SignedIn$: Observable<boolean> = this.auth.UserSignedIn$.asObservable()
 
-  constructor() { }
+  constructor(private auth: AuthService) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

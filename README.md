@@ -90,7 +90,7 @@ TODO
 
 1. test all spec files
 
-`npm run test`
+   `npm run test`
 
 2. test on one spec file
 

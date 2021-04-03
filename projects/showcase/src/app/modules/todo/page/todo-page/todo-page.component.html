@@ -1,1 +1,6 @@
-<todo-list-container></todo-list-container>
+<div *ngIf="SignedIn$ | async; else elseBlock">
+  <todo-list-container></todo-list-container>
+</div>
+<ng-template #elseBlock
+  ><div><p>Please sign in to view your to do list.</p></div>
+</ng-template>
