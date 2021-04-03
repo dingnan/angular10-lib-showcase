@@ -7,7 +7,6 @@ import { AuthService } from './service/auth.service'
 @NgModule({
   declarations: [PageNotFoundComponent, UserComponent],
   imports: [CommonModule],
-  providers: [AuthService],
   exports: [PageNotFoundComponent, UserComponent],
 })
 export class CoreModule {}
