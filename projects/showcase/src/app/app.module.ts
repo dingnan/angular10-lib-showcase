@@ -19,7 +19,7 @@ import { CoreModule } from './core/core.module'
     CoreModule,
     LayoutModule,
     HomeModule,
-    SharedModule,
+    SharedModule.forRoot(),
   ],
   bootstrap: [AppComponent],
 })

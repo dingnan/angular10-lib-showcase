@@ -6,8 +6,8 @@ import {
   Output,
 } from '@angular/core'
 import { EventEmitter } from '@angular/core'
-import { SpinnerOverlayService } from 'projects/showcase/src/app/core/services/spinner/spinner-overlay.service'
 import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item'
+import { SpinnerOverlayService } from '../../../shared/services/spinner/spinner-overlay.service'
 
 /**
  * Presentational Component
