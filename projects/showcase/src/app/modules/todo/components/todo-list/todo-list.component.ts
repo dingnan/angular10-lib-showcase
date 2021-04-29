@@ -6,6 +6,7 @@ import {
   Output,
 } from '@angular/core'
 import { EventEmitter } from '@angular/core'
+import { SpinnerOverlayService } from 'projects/showcase/src/app/core/services/spinner/spinner-overlay.service'
 import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item'
 
 /**
@@ -18,12 +19,12 @@ import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoListComponent implements OnInit {
-  @Input() todos: TodoItem[] = []
+  @Input() todos: TodoItem[]
   @Output() addTodo: EventEmitter<any> = new EventEmitter<any>()
   @Output() updateTodo: EventEmitter<any> = new EventEmitter<any>()
   @Output() removeTodo: EventEmitter<any> = new EventEmitter<any>()
 
-  constructor() {}
+  constructor(public spinnerOverlayService: SpinnerOverlayService) {}
 
   ngOnInit(): void {}
 

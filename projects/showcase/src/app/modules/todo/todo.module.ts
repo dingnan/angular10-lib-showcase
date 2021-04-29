@@ -6,6 +6,7 @@ import { TodoListContainerComponent } from './components/todo-list.container/tod
 import { TodoListComponent } from './components/todo-list/todo-list.component'
 import { TodoItemComponent } from './components/todo-item/todo-item.component'
 import { ItemDetailComponent } from './components/item-detail/item-detail.component'
+import { SharedModule } from '../shared/shared.module'
 
 const route: Routes = [
   { path: '', component: TodoPageComponent },
@@ -20,6 +21,6 @@ const route: Routes = [
     TodoItemComponent,
     ItemDetailComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(route)],
+  imports: [CommonModule, RouterModule.forChild(route), SharedModule],
 })
 export class TodoModule {}

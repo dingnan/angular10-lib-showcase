@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { Observable } from 'rxjs'
+import { Observable, of } from 'rxjs'
 import { TodoItem } from '../../../data/schema/todo-item'
+import { delay } from 'rxjs/operators'
 
 // A service becomes singleton when we apply providedIn
 @Injectable({
@@ -19,7 +20,22 @@ export class TodoService {
   DELETE – Delete
   */
   getTodos(): Observable<TodoItem[]> {
-    return this.http.get<TodoItem[]>(this.baseUrl + 'todos')
+    //return this.http.get<TodoItem[]>(this.baseUrl + 'todos')
+    const data = [
+      {
+        userId: 1,
+        id: 42,
+        title: 'foo',
+        completed: true
+      },
+      {
+        userId: 1,
+        id: 43,
+        title: 'bar',
+        completed: false
+      }
+    ];
+    return this.fakeHttpCall(this.baseUrl + 'todos', data);
   }
 
   getTodo(id) {
@@ -42,5 +58,9 @@ export class TodoService {
 
   deleteTodo(id) {
     if (!id) throw 'empty todo id'
+  }
+
+  fakeHttpCall(url: string, data: Array<any>): Observable<any> {
+    return of(data).pipe(delay(2000));
   }
 }

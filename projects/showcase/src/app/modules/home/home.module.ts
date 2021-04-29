@@ -6,6 +6,7 @@ import { CoreModule } from '../../core/core.module'
 
 @NgModule({
   declarations: [HomePageComponent],
+  //imports: [CommonModule, CoreModule.forChild(), SharedModule],
   imports: [CommonModule, CoreModule, SharedModule],
   exports: [HomePageComponent],
 })

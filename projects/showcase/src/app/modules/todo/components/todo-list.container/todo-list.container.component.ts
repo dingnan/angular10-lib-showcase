@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core'
+import { SpinnerOverlayService } from 'projects/showcase/src/app/core/services/spinner/spinner-overlay.service'
 import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item'
 import { Observable } from 'rxjs'
-import { map } from 'rxjs/operators'
+import { finalize, map } from 'rxjs/operators'
 import { TodoService } from '../../service/todo.service'
 
 /**
@@ -15,12 +16,16 @@ import { TodoService } from '../../service/todo.service'
 export class TodoListContainerComponent implements OnInit {
   todoList$: Observable<TodoItem[]>
 
-  constructor(private todoService: TodoService) {}
+  constructor(private todoService: TodoService, private spinnerOverlayService: SpinnerOverlayService) {}
 
   ngOnInit(): void {
+    this.spinnerOverlayService.loading$.next(true);
     this.todoList$ = this.todoService
       .getTodos()
-      .pipe(map((toDoList: TodoItem[]) => toDoList.slice(0, 10)))
+      .pipe(
+        map((toDoList: TodoItem[]) => toDoList.slice(0, 10)),
+        finalize(() => this.spinnerOverlayService.loading$.next(false))
+      )
   }
 
   onAddTodo($event) {
