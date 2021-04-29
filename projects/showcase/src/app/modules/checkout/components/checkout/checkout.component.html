@@ -1,0 +1,12 @@
+<div class="payment">
+    <div class="payment-method">
+        <div class="payment-label">Pay by credit card:</div>
+        <div class="col"><input type="text" /></div>
+    </div>
+    <ng-container *ngIf="bitcoinEnabled">
+        <div class="payment-method">
+            <div class="payment-label">Pay by bitcoin:</div>
+            <div class="col"><input type="text" /></div>
+        </div>
+    </ng-container>
+</div>

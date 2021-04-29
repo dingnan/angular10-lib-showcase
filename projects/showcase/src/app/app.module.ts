@@ -16,7 +16,7 @@ import { CoreModule } from './core/core.module'
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    CoreModule,
+    CoreModule.forRoot(),
     LayoutModule,
     HomeModule,
     SharedModule.forRoot(),

@@ -22,6 +22,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/todo/todo.module').then((m) => m.TodoModule),
   },
+  {
+    path: 'checkout',
+    loadChildren: () =>
+      import('./modules/checkout/checkout.module').then((m) => m.CheckoutModule),
+  },
   { path: '**', component: PageNotFoundComponent },
 ]
 

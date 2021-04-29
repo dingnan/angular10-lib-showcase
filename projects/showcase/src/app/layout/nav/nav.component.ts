@@ -27,6 +27,11 @@ export class NavComponent implements OnInit {
       path: './todo',
       index: 3,
     },
+    {
+      label: 'Checkout',
+      path: './checkout',
+      index: 4,
+    },
   ]
 
   activeLink = this.navLinks[0]

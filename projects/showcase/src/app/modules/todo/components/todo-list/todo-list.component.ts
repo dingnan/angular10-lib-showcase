@@ -6,7 +6,7 @@ import {
   Output,
 } from '@angular/core'
 import { EventEmitter } from '@angular/core'
-import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item'
+import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item.interface'
 import { SpinnerOverlayService } from '../../../shared/services/spinner/spinner-overlay.service'
 
 /**

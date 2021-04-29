@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item'
+import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item.interface'
 import { Observable } from 'rxjs'
 import { finalize, map } from 'rxjs/operators'
 import { SpinnerOverlayService } from '../../../shared/services/spinner/spinner-overlay.service'
