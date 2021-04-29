@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppConfigService } from 'projects/showcase/src/app/core/services/config/app-config.service';
+import { PaymentService } from 'projects/showcase/src/app/core/services/payment/payment.service';
 
 @Component({
   selector: 'app-checkout',
@@ -10,7 +11,7 @@ export class CheckoutComponent implements OnInit {
 
   bitcoinEnabled: boolean = this.appConfigService.config.enableBitcoin;
   
-  constructor(private appConfigService: AppConfigService) { }
+  constructor(private appConfigService: AppConfigService, private paymentService: PaymentService) { }
 
   ngOnInit(): void {
   }
