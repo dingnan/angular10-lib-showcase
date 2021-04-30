@@ -8,6 +8,7 @@ import { HomeModule } from './modules/home/home.module'
 import { AppRoutingModule } from './app-routing.module'
 import { SharedModule } from './modules/shared/shared.module'
 import { CoreModule } from './core/core.module'
+import { LoggingLevel } from './modules/shared/model/log.settings'
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,7 @@ import { CoreModule } from './core/core.module'
     CoreModule.forRoot(),
     LayoutModule,
     HomeModule,
-    SharedModule.forRoot(),
+    SharedModule.forRoot(LoggingLevel.fatal),
   ],
   bootstrap: [AppComponent],
 })
