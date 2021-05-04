@@ -11,16 +11,15 @@ import {
   styleUrls: ['./simple-alert.component.scss'],
 })
 export class SimpleAlertComponent implements OnInit {
-  alertMessage$: Observable<SimpleAlertMessage | boolean>
-  close$ = new Subject<boolean>()
+  alertMessage$: Observable<SimpleAlertMessage>
 
   constructor(private alertService: NgSimpleAlertService) {}
 
   ngOnInit() {
-    this.alertMessage$ = merge(this.alertService.alertMessage$, this.close$)
+    this.alertMessage$ = this.alertService.alertMessage$
   }
 
   closeAlert(): void {
-    this.close$.next()
+    this.alertService.alertMessage$.next(null);
   }
 }
