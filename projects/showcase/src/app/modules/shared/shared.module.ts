@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { UserComponent } from './components/user/user.component';
 import { SpinnerOverlayService } from './services/spinner/spinner-overlay.service';
 import { LOGGER_SETTING, LoggingLevel } from './model/log.settings';
-import { LoggerService } from './services/logger/logger.service';
+import { LoggerService } from '../../core/services/logger/logger.service';
 
 @NgModule({
   declarations: [PageNotFoundComponent, UserComponent],

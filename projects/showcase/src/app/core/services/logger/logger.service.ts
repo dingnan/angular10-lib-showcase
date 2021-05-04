@@ -1,5 +1,5 @@
 import { Inject, Injectable, Optional } from '@angular/core';
-import { LOGGER_SETTING, LoggingLevel } from '../../model/log.settings';
+import { LOGGER_SETTING, LoggingLevel } from '../../../modules/shared/model/log.settings';
 
 // @Injectable({
 //   providedIn: 'root'

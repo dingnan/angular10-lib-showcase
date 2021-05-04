@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { NgModule } from '@angular/core'
+import { ErrorHandler, NgModule } from '@angular/core'
 import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component'
 import { LayoutModule } from './layout/layout.module'
@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { SharedModule } from './modules/shared/shared.module'
 import { CoreModule } from './core/core.module'
 import { LoggingLevel } from './modules/shared/model/log.settings'
+import { GlobalErrorHandler } from './core/services/error-handler/global-error-handler.service'
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { LoggingLevel } from './modules/shared/model/log.settings'
     HomeModule,
     SharedModule.forRoot(LoggingLevel.fatal),
   ],
+  providers: [ {provide: ErrorHandler, useClass: GlobalErrorHandler} ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

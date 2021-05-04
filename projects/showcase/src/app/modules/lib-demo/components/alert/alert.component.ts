@@ -17,6 +17,7 @@ export class AlertComponent implements OnInit {
 
   public createDangerMessage(): void {
     this.alertService.createDangerAlert('Sample danger message')
+    throw new Error('sample error message')
   }
 
   public createWarningMessage(): void {

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { TodoItem } from 'projects/showcase/src/app/data/schema/todo-item.interface'
 import { Observable } from 'rxjs'
 import { finalize, map } from 'rxjs/operators'
-import { LoggerService } from '../../../shared/services/logger/logger.service'
+import { LoggerService } from '../../../../core/services/logger/logger.service'
 import { SpinnerOverlayService } from '../../../shared/services/spinner/spinner-overlay.service'
 import { TodoService } from '../../service/todo.service'
 
