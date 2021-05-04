@@ -19,5 +19,9 @@
         "dist/ng-simple-alert"
       ]
     }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "strictTemplates": true
   }
 }
