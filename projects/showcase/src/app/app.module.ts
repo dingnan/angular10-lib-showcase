@@ -8,7 +8,7 @@ import { HomeModule } from './modules/home/home.module'
 import { AppRoutingModule } from './app-routing.module'
 import { SharedModule } from './modules/shared/shared.module'
 import { CoreModule } from './core/core.module'
-import { LoggingLevel } from './modules/shared/model/log.settings'
+import { LoggingLevel } from './core/model/log.settings'
 import { GlobalErrorHandler } from './core/services/error-handler/global-error-handler.service'
 
 @NgModule({

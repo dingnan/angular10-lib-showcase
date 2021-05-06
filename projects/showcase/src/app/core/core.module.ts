@@ -1,7 +1,7 @@
 import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core'
 import { Optional } from '@angular/core';
 import { SkipSelf } from '@angular/core';
-import { LOGGER_SETTING, LoggingLevel } from '../modules/shared/model/log.settings';
+import { LOGGER_SETTING, LoggingLevel } from './model/log.settings';
 import { AppConfigService } from './services/config/app-config.service';
 import { LoggerService } from './services/logger/logger.service';
 
