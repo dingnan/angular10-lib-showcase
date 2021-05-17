@@ -7,6 +7,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component'
 import { TodoItemComponent } from './components/todo-item/todo-item.component'
 import { ItemDetailComponent } from './components/item-detail/item-detail.component'
 import { SharedModule } from '../shared/shared.module'
+import { FormsModule } from '@angular/forms'
 
 const route: Routes = [
   { path: '', component: TodoPageComponent },
@@ -21,6 +22,6 @@ const route: Routes = [
     TodoItemComponent,
     ItemDetailComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(route), SharedModule],
+  imports: [CommonModule, FormsModule, RouterModule.forChild(route), SharedModule],
 })
 export class TodoModule {}

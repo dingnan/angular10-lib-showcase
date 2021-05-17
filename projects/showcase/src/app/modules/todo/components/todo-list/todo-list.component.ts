@@ -24,12 +24,23 @@ export class TodoListComponent implements OnInit {
   @Output() updateTodo: EventEmitter<any> = new EventEmitter<any>()
   @Output() removeTodo: EventEmitter<any> = new EventEmitter<any>()
 
+  newItem: string
+
   constructor(public spinnerOverlayService: SpinnerOverlayService) {}
 
   ngOnInit(): void {}
 
-  addTodoItem(e) {
-    this.addTodo.emit('add todo clicked')
+  onKeydown(e) {
+    if (e.keyCode === 13) {
+      this.todos.push({
+        userId: Math.random(),
+        id: Math.random(),
+        title: this.newItem,
+        completed: false
+      });
+      this.newItem = ''
+      this.addTodo.emit('add todo clicked')
+    }
   }
 
   updateTodoItem(todo: TodoItem) {
@@ -37,6 +48,10 @@ export class TodoListComponent implements OnInit {
   }
 
   removeTodoItem(todo: TodoItem) {
-    this.removeTodo.emit(todo)
+    const index = this.todos.indexOf(todo);
+    if (index > -1) {
+      this.todos.splice(index, 1)
+      this.removeTodo.emit(todo)
+    }
   }
 }

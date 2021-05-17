@@ -3,7 +3,7 @@ import { AuthService } from 'projects/showcase/src/app/core/services/auth/auth.s
 import { Observable } from 'rxjs'
 
 @Component({
-  selector: 'app-todo-page',
+  selector: 'todo-page',
   templateUrl: './todo-page.component.html',
   styleUrls: ['./todo-page.component.scss'],
 })

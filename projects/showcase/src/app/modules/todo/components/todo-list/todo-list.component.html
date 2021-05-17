@@ -7,27 +7,28 @@
       *ngIf="todos?.length; then listTodos; else addTodo"
     ></ng-container>
     <ng-template #addTodo>
-      <div style="margin-bottom: 20px">You do not have any todo item</div>
-      <button (click)="addTodoItem($event)">Add Todo</button>
+      <div style="margin-bottom: 20px">You do not have any todo item, enjoy your day! 😊</div>
     </ng-template>
     <ng-template #listTodos>
       <div style="display: flex; margin-bottom: 20px">
-        <div style="flex: 0.3"></div>
+        <div style="flex: 0.1"></div>
         <div class="todo-item-header" style="flex: 1">
           <span>Completed</span>
-          <span>ID</span>
           <span>Description</span>
         </div>
-      </div>
+      </div>      
       <div *ngFor="let todo of todos" style="display: flex">
-        <div style="flex: 0.3; margin-top: 10px">
-          <button (click)="updateTodoItem(todo)">Update</button>
-          <button (click)="removeTodoItem(todo)">Remove</button>
+        <div style="flex: 0.1; margin-top: 10px">
+          <mat-icon color="primary" style="cursor: pointer;" (click)="updateTodoItem(todo)">edit</mat-icon>
+          <mat-icon color="primary" style="cursor: pointer;" (click)="removeTodoItem(todo)">delete</mat-icon>
         </div>
         <div style="flex: 1">
           <todo-item [item]="todo"></todo-item>
         </div>
       </div>
     </ng-template>
+    <mat-form-field style="margin-top: 20px;">
+      <input placeholder="Enter to do item" matInput type="text" [(ngModel)]="newItem" (keydown)="onKeydown($event)">
+    </mat-form-field>
   </div>
 </ng-template>
